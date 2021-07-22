@@ -220,6 +220,9 @@ $ helm delete --purge my-release
 | `metrics.serviceMonitor.honorLabels`      | Specify honorLabels parameter to add the scrape endpoint                                                                    | `false`                   |
 | `metrics.serviceMonitor.release`          | Specify the release for ServiceMonitor. Sometimes it should be custom for prometheus operator to work                       | `nil`                     |
 | `metrics.serviceMonitor.additionalLabels` | Used to pass Labels that are used by the Prometheus installed in your cluster to select Service Monitors to work with       | `{}`                      |
+| `diagnosticMode.enabled`                  | Enable diagnostic mode (all probes will be disabled and the command will be overridden)                                     | `false`                   |
+| `diagnosticMode.command`                  | Command to override all containers in the deployment                                                                        | `[]`                      |
+| `diagnosticMode.args`                     | Args to override all containers in the deployment                                                                           | `[]`                      |
 
 
 Specify each parameter using the `--set key=value[,key=value]` argument to `helm install`. For example,
